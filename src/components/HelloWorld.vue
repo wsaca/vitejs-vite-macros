@@ -1,9 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import type { HelloWorldProps } from './types';
 
-defineProps<{ msg: string }>()
+// DOES WORK
+/*
+withDefaults(defineProps<HelloWorldProps>(), {
+  msg: 'Hello',
+});
+*/
 
-const count = ref(0)
+// DOES NOT WORK
+const msg = 'Hello';
+withDefaults(defineProps<HelloWorldProps>(), {
+  msg,
+});
+
+const count = ref(0);
 </script>
 
 <template>
