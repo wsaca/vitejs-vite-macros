@@ -1,3 +1,5 @@
 export interface HelloWorldProps {
-  msg: string;
+  msg?: string;
+  onClick?(): void;
+  onFocus?: () => void;
 }
