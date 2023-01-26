@@ -1,5 +1,8 @@
+interface Transition {
+  duration?: string;
+}
+
 export interface HelloWorldProps {
   msg?: string;
-  onClick?(): void;
-  onFocus?: () => void;
+  transition?: Transition | boolean;
 }

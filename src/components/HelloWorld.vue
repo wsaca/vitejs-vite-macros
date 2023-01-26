@@ -2,18 +2,7 @@
 import { ref } from 'vue';
 import type { HelloWorldProps } from './types';
 
-// DOES WORK
-/*
-withDefaults(defineProps<HelloWorldProps>(), {
-  msg: 'Hello',
-});
-*/
-
-// DOES NOT WORK
-const msg = 'Hello';
-withDefaults(defineProps<HelloWorldProps>(), {
-  msg,
-});
+defineProps<HelloWorldProps>();
 
 const count = ref(0);
 </script>
